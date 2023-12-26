@@ -82,7 +82,7 @@ function getDataById(id) {
 
   request().get(path + "/" + id)
     .then(response => {
-      fillDataToModal(response.data.data[0]);
+      fillDataToModal(response.data.data);
       updateModal.setAttribute("dataId", id);
       updateBtsModal.show(updateModal);
     })

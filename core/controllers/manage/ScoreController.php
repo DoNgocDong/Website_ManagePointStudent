@@ -68,7 +68,7 @@ class ScoreController extends Controller
     $data["diemGK"] = (float)$this->utils->get_POST("diemGK");
     $data["diemCK"] = (float)$this->utils->get_POST("diemCK");
 
-    $validate = $this->validateData($data["maSinhVien"], $data["maMon"], $data["diemrCC"], $data["diemTH"], $data["diemGK"], $data["diemCK"]);
+    $validate = $this->validateData($data["maSinhVien"], $data["maMon"], $data["diemCC"], $data["diemTH"], $data["diemGK"], $data["diemCK"]);
     if(!$validate["valid"]) {
       return new JsonResponse([
         "message" => $validate["message"]
@@ -224,8 +224,8 @@ class ScoreController extends Controller
     $this->courseController = new CourseController();
     $detailData = array();
 
-    $studentData = $this->studentController->findById($maSinhVien);
-    $courseData = $this->courseController->findById($maMon);
+    $studentData = json_decode($this->studentController->findById($maSinhVien)->getBody(), true);
+    $courseData = json_decode($this->courseController->findById($maMon)->getBody(), true);
 
     $detailData["hoTen"] = $studentData["data"]["hoTen"];
     $detailData["tenMon"] = $courseData["data"]["tenMon"];

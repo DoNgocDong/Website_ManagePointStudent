@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     request().get("/manage/student/" + msv)
       .then(response => {
-        const data = response.data.data[0];
+        const data = response.data.data;
         inputName_C.value = data.hoTen;
         inputClass_C.value = data.tenLop;
       })
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     request().get("/manage/student/" + msv)
       .then(response => {
-        const data = response.data.data[0];
+        const data = response.data.data;
         inputName_U.value = data.hoTen;
         inputClass_U.value = data.tenLop;
       })
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     request().get("/manage/course/" + maMon)
       .then(response => {
-        const data = response.data.data[0];
+        const data = response.data.data;
         inputTenMon_C.value = data.tenMon;
         inputHocKy_C.value = data.hocKy
       })
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     request().get("/manage/course/" + maMon)
       .then(response => {
-        const data = response.data.data[0];
+        const data = response.data.data;
         inputTenMon_U.value = data.tenMon;
         inputHocKy_U.value = data.hocKy
       })
@@ -182,7 +182,7 @@ function getDataById(id) {
 
   request().get(path + "/" + id)
     .then(response => {
-      fillDataToModal(response.data.data[0]);
+      fillDataToModal(response.data.data);
       updateModal.setAttribute("dataId", id);
       updateBtsModal.show(updateModal);
     })

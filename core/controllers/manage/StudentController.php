@@ -28,7 +28,7 @@ class StudentController extends Controller {
   public function findById($id) {
     $condition = ["maSinhVien" => $id];
 
-    $data = $this->studentModel->select("*", $condition);
+    $data = $this->studentModel->selectOne($condition);
 
     if(!$data) {
       return new JsonResponse([

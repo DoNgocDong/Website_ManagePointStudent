@@ -53,7 +53,7 @@ async function getDataById(id) {
 
   request().get(path + "/" + id)
     .then(response => {
-      fillDataToModal(response.data.data[0]);
+      fillDataToModal(response.data.data);
     })
     .catch(error => {
       console.error("Đã xảy ra lỗi:", error);

@@ -31,7 +31,7 @@ class CourseController extends Controller {
   public function findById($id) {
     $condition = ["maMon" => $id];
 
-    $data = $this->courseModel->select("*", $condition);
+    $data = $this->courseModel->selectOne($condition);
 
     if(!$data) {
       return new JsonResponse([

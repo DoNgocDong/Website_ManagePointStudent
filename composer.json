@@ -1,0 +1,11 @@
+{
+    "name": "nd/webssm",
+    "description": "Student Score Management",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "miladrahimi/phprouter": "5.*",
+        "catfan/medoo": "^1.7",
+        "league/plates": "^3.3"
+    }
+}

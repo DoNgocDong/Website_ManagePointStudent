@@ -1,0 +1,17 @@
+.slide {
+  padding: 3% 3% 0 3%;
+}
+
+.content-container {
+  padding: 3% 3% 3% 3%;
+  background-color: #EEEEEE;
+}
+
+.card {
+  border: 0;
+}
+
+.card .card-header {
+  font-weight: 600;
+  color: chocolate;
+}

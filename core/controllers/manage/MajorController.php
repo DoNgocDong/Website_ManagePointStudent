@@ -138,11 +138,11 @@ class MajorController extends Controller {
     $condition2 = ["tenNganh" => $new_tenNganh];
 
     $old_data = $this->majorModel->selectOne([
-      "maLop" => $old_maNganh
+      "maNganh" => $old_maNganh
     ]);
 
-    $case1 = ($old_data["maLop"] !== $new_maNganh) && ($this->majorModel->has($condition1));
-    $case2 = ($old_data["tenLop"] !== $new_tenNganh) && ($this->majorModel->has($condition2));
+    $case1 = ($old_data["maNganh"] !== $new_maNganh) && ($this->majorModel->has($condition1));
+    $case2 = ($old_data["tenNganh"] !== $new_tenNganh) && ($this->majorModel->has($condition2));
 
     if($case1 || $case2)
       return true;

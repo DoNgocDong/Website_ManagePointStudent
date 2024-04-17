@@ -37,6 +37,7 @@
                 <a class="dropdown-item" href="/manage/course"> Quản lý môn học </a>
                 <a class="dropdown-item" href="/manage/student"> Quản lý sinh viên </a>
                 <a class="dropdown-item" href="/manage/score"> Quản lý điểm </a>
+                <a class="dropdown-item" href="/manage/major"> Quản lý ngành </a>
               </div>
             </li>
             <li class="nav-item dropdown">
